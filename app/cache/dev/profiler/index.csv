@@ -149,3 +149,7 @@ d77b34,127.0.0.1,GET,http://localhost/symphonytest/web/app_dev.php/adduser/,1425
 d6c92f,127.0.0.1,GET,http://localhost/symphonytest/web/app_dev.php/adduser/,1425576571,
 027119,127.0.0.1,POST,http://localhost/symphonytest/web/app_dev.php/adduser/,1425576626,
 0be413,127.0.0.1,GET,http://localhost/symphonytest/web/app_dev.php/profile/8,1425576626,
+6d96bc,127.0.0.1,GET,http://localhost/symphonytest/web/app_dev.php/adduser/,1425577104,
+161c94,127.0.0.1,GET,http://localhost/symphonytest/web/app_dev.php/adduser/,1425577109,
+6639a8,127.0.0.1,POST,http://localhost/symphonytest/web/app_dev.php/adduser/,1425577133,
+c5a996,127.0.0.1,GET,http://localhost/symphonytest/web/app_dev.php/profile/9,1425577134,

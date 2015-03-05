@@ -1,0 +1,6 @@
+test_homepage:
+    path:     /profile/{id}
+    defaults: { _controller: testBundle:Default:show, id: "yo man go f**k ur selff!" }
+test_add:
+    path:   /adduser/
+    defaults: { _controller: testBundle:Default:new}

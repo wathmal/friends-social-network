@@ -1,0 +1,19 @@
+testBundle\Entity\Status:
+    type: entity
+    table: status
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }
+    
+    fields:
+        status:
+            type: text
+        time:
+            type: datetime
+        userid:
+            type: integer
+            legth: 11

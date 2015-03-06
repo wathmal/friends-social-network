@@ -132,21 +132,27 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'test_homepage')), array (  '_controller' => 'testBundle\\Controller\\DefaultController::showAction',  'id' => 'yo man go f**k ur selff!',));
         }
 
-        if (0 === strpos($pathinfo, '/a')) {
-            // test_add
-            if (rtrim($pathinfo, '/') === '/adduser') {
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'test_add');
-                }
-
-                return array (  '_controller' => 'testBundle\\Controller\\DefaultController::newAction',  '_route' => 'test_add',);
+        // test_add
+        if (rtrim($pathinfo, '/') === '/adduser') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'test_add');
             }
 
-            // homepage
-            if ($pathinfo === '/app/example') {
-                return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+            return array (  '_controller' => 'testBundle\\Controller\\DefaultController::newAction',  '_route' => 'test_add',);
+        }
+
+        // feed_home
+        if (rtrim($pathinfo, '/') === '/feed') {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'feed_home');
             }
 
+            return array (  '_controller' => 'testBundle\\Controller\\DefaultController::showStatusAction',  '_route' => 'feed_home',);
+        }
+
+        // homepage
+        if ($pathinfo === '/app/example') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
         // _welcome

@@ -76,5 +76,15 @@ class DefaultController extends Controller {
 
         return $this->render('testBundle:Default:adduser.html.twig', array('form' => $form->createView()));
     }
+    
+    
+    
+    public function showStatusAction(){
+        $status = $this->getDoctrine()->getRepository('testBundle:Status')->findAll();
+        
+    //    if(!$status){
+            return $this->render('testBundle:Default:feed.html.twig', array('length' => count($status), 'statuses'=> $status));
+    //    }
+    }
 
 }

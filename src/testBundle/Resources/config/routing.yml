@@ -4,3 +4,6 @@ test_homepage:
 test_add:
     path:   /adduser/
     defaults: { _controller: testBundle:Default:new}
+feed_home:
+    path:   /feed/
+    defaults: { _controller: testBundle:Default:showStatus}

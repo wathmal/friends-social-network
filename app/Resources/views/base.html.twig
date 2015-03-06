@@ -10,14 +10,52 @@
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <style>
+            body {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
 
+            .navbar {
+                margin-bottom: 20px;
+            }
+        </style>
 
     </head>
     <body>
         <div class="container">
+
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">friends</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">home</a></li>
+                            <li><a href="#">profile</a></li>
+                            <li><a href="#">contact</a></li>
+                            
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="active"><a href="./">login / signup <span class="sr-only">(current)</span></a></li>
+                            <li><a href="../navbar-fixed-top/">log out</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div><!--/.container-fluid -->
+            </nav>
+
+
+
             <div class="jumbotron">
-                <h1>friends</h1>
-                <p>...</p>
+                <h1>....</h1>
             </div>
 
 

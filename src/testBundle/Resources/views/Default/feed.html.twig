@@ -1,11 +1,14 @@
 {% extends '::base.html.twig' %}
 
 {% block container %}
-    <h3>#{{ length }} statuses</h3>
+    <div>
+        <h3>#{{ length }} statuses</h3>
 
-    <ul>
-        {% for status in statuses %}
-            <li>{{ status.status|e }}</li>
-            {% endfor %}
-    </ul>
+        <ul>
+            
+            {% for status in statuses %}
+                <li>{{ status.status|e }}</li>
+                {% endfor %}
+        </ul>
+    </div>
 {% endblock %}

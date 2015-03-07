@@ -37,6 +37,7 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js\"></script>
+        <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js\"></script>
         <style>
             body {
                 padding-top: 20px;
@@ -45,6 +46,12 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
 
             .navbar {
                 margin-bottom: 20px;
+            }
+
+            form{
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
             }
         </style>
 
@@ -62,17 +69,21 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
                             <span class=\"icon-bar\"></span>
                             <span class=\"icon-bar\"></span>
                         </button>
-                        <a class=\"navbar-brand\" href=\"#\">friends</a>
+                        <a class=\"navbar-brand\" href=\"/\">
+                            <span class=\"glyphicon glyphicon-sunglasses\" aria-hidden=\"true\"></span>
+                            friends
+                        </a>
                     </div>
                     <div id=\"navbar\" class=\"navbar-collapse collapse\">
                         <ul class=\"nav navbar-nav\">
-                            <li class=\"active\"><a href=\"#\">home</a></li>
-                            <li><a href=\"#\">profile</a></li>
+                            <li class=\"active\"><a href=\"/\">home</a></li>
+                            <li><a href=\"/profile\">profile</a></li>
                             <li><a href=\"#\">contact</a></li>
-                            
+
                         </ul>
                         <ul class=\"nav navbar-nav navbar-right\">
-                            <li class=\"active\"><a href=\"./\">login / signup <span class=\"sr-only\">(current)</span></a></li>
+                            <li id=\"registernav\"><a href=\"/register\">register<span class=\"sr-only\">(current)</span></a></li>
+                            <li id=\"loginnav\"><a href=\"/login\">login<span class=\"sr-only\">(current)</span></a></li>
                             <li><a href=\"../navbar-fixed-top/\">log out</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -87,15 +98,16 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
 
 
         ";
-        // line 62
+        // line 73
         $this->displayBlock('container', $context, $blocks);
-        // line 63
+        // line 74
         echo "
     </div>
+    
     ";
-        // line 65
+        // line 77
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 68
+        // line 80
         echo "
 </body>
 </html>
@@ -105,7 +117,7 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        echo "welcome!";
+        echo "friends";
     }
 
     // line 7
@@ -117,15 +129,15 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
         ";
     }
 
-    // line 62
+    // line 73
     public function block_container($context, array $blocks = array())
     {
     }
 
-    // line 65
+    // line 77
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 66
+        // line 78
         echo "
     ";
     }
@@ -142,6 +154,6 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
 
     public function getDebugInfo()
     {
-        return array (  129 => 66,  126 => 65,  121 => 62,  115 => 8,  112 => 7,  106 => 5,  99 => 68,  97 => 65,  93 => 63,  91 => 62,  36 => 11,  34 => 7,  29 => 5,  23 => 1,);
+        return array (  141 => 78,  138 => 77,  133 => 73,  127 => 8,  124 => 7,  118 => 5,  111 => 80,  109 => 77,  104 => 74,  102 => 73,  36 => 11,  34 => 7,  29 => 5,  23 => 1,);
     }
 }

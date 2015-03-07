@@ -5,5 +5,5 @@ test_add:
     path:   /adduser/
     defaults: { _controller: testBundle:Default:new}
 feed_home:
-    path:   /feed/
+    path:   /
     defaults: { _controller: testBundle:Default:showStatus}

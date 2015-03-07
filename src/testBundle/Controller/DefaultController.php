@@ -32,14 +32,15 @@ class DefaultController extends Controller {
 
     public function showAction($id) {
         // find object by its primary key
-        $user = $this->getDoctrine()->getRepository('testBundle:User')->find($id);
-
+        $id = $this->getUser()->getId();
+        $user = $this->getDoctrine()->getRepository('UserBundle:User')->find($id);
+        
         if (!$user) {
-            return $this->render('testBundle:Default:profile.html.twig', array('id' => 'no profile found'));
+            return $this->render('testBundle:Default:profile.html.twig', array('name' => 'no profile found'));
         }
-
-        return $this->render('testBundle:Default:profile.html.twig', array('id' => $user->getId(),
-                    'name' => $user->getName(), 'picture' => $user->getPicture(), 'description' => $user->getDescription()));
+        return $this->render('testBundle:Default:profile.html.twig', array('name' => $user));
+        //return $this->render('testBundle:Default:profile.html.twig', array('id' => $user->getId(),
+        //            'name' => $user->getName(), 'picture' => $user->getPicture(), 'description' => $user->getDescription()));
     }
 
     

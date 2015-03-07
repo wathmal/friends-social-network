@@ -12,14 +12,17 @@ git commit https://github.com/wathmal/friends-social-network.git
 ```
 # sudo chmod -R 777 friends-social-network/
 ```
-**configure app/confif/config.yml file to connect with your mysql database.**
+**configure config.yml file to connect with your mysql database.**
+```
+app/confif/config.yml
+```
 
 **create database**
 ```
 $ php app/console doctrine:database:create
 ```
 
-**generate tables/ entities**
+**generate entities**
 ```
 $ php app/console doctrine:generate:entity
 ```

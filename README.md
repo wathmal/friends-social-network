@@ -12,6 +12,10 @@ git commit https://github.com/wathmal/friends-social-network.git
 ```
 # sudo chmod -R 777 friends-social-network/
 ```
+**or**
+```
+# sudo chmod -R 755 friends-social-network/
+```
 **configure config.yml file to connect with your mysql database.**
 ```
 app/confif/config.yml

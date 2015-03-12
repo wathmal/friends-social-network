@@ -13,8 +13,7 @@ class User
      * @var integer
      */
     private $id;
-    protected $email;
-    private $plainpassword;
+    protected $fosuserid;
     protected $name;
     protected $description;
     protected $picture;
@@ -52,22 +51,16 @@ class User
     {
         return $this->id;
     }
-    function setEmail($email) {
-        $this->email = $email;
-    }
-
-    function setPlainpassword($plainpassword) {
-        $this->plainpassword = $plainpassword;
-    }
-    function getEmail() {
-        return $this->email;
-    }
-
-    function getPlainpassword() {
-        return $this->plainpassword;
-    }
 
 
+
+    function getFosuserid() {
+        return $this->fosuserid;
+    }
+
+    function setFosuserid($fosuserid) {
+        $this->fosuserid = $fosuserid;
+    }
 
 
 

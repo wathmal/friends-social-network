@@ -2,6 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}friends{% endblock %}</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         {% block stylesheets %}
@@ -15,6 +16,7 @@
             body {
                 padding-top: 20px;
                 padding-bottom: 20px;
+                margin-bottom: 60px;
             }
 
             .navbar {
@@ -26,6 +28,20 @@
                 margin-left: auto;
                 margin-right: auto;
             }
+            html {
+                position: relative;
+                min-height: 100%;
+            }
+
+            .footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                /* Set the fixed height of the footer here */
+                height: 45px;
+                background-color: #f5f5f5;
+            }
+
         </style>
 
     </head>
@@ -43,21 +59,20 @@
                             <span class="icon-bar"></span>
                         </button>
                         <a class="navbar-brand" href="/">
-                            <span class="glyphicon glyphicon-sunglasses" aria-hidden="true"></span>
                             friends
                         </a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="/">home</a></li>
-                            <li><a href="/profile">profile</a></li>
-                            <li><a href="#">contact</a></li>
+                            <li id="profilenav"><a href="/profile">profile</a></li>
+
 
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li id="registernav"><a href="/register">register<span class="sr-only">(current)</span></a></li>
                             <li id="loginnav"><a href="/login">login<span class="sr-only">(current)</span></a></li>
-                            <li><a href="../navbar-fixed-top/">log out</a></li>
+                            <li><a href="/logout">log out</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
@@ -66,14 +81,25 @@
 
 
             <div class="jumbotron">
-                <h1>....</h1>
+                <h1 style="text-align: center;">cse friends network</h1>
             </div>
 
 
         {% block container %}{% endblock %}
 
     </div>
-    
+
+
+    <footer class="footer">
+        <div class="container" style="text-align: center;">
+            <p class="text-muted">built using awesome <b>symfony framework</b> and <b>bootstrap</b>
+            <br>
+            <a href="https://github.com/wathmal/friends-social-network">github project</a>
+            </p>
+            
+        </div>
+    </footer>
+
     {% block javascripts %}
 
     {% endblock %}

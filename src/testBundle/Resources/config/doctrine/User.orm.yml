@@ -18,10 +18,6 @@ testBundle\Entity\User:
         picture:
             type: string
             length: 255
-        email:
-            type: string
-            legth: 255
-        plainpassword:
-            type: string
-            length: 100
-            max: 4096
+        fosuserid:
+            type: integer
+            legth: 11

@@ -2,13 +2,65 @@
 
 {% block container %}
     <div>
-        <h3>#{{ length }} statuses</h3>
+        <h3 style="text-align: center;"><span class="label label-info">#{{ length }}</span> statuses</h3>
+        {#<div class="well">
+            <div class="media">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object" width="64" src="https://pbs.twimg.com/profile_images/574199826545405952/eb7Ci0y8_400x400.png" alt="...">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">sasitha wathmal</h4>
+                    mokaada yakooooooooooooooooooooooooo kiyanneeeeeeee katapiyagena wadak karapannnnnnn
+                </div>
+            </div>
+        </div>#}
 
-        <ul>
-            
-            {% for status in statuses %}
-                <li>{{ status.status|e }}</li>
-                {% endfor %}
-        </ul>
+        {#{{ dump(array) }}#}
+
+        {#
+        {% for status in statuses %}
+            <div class="well">{{ status.status|e }}</div>
+        {% endfor %}
+        #}
+
+
+        <div class=" col-lg-6 col-md-8 col-sm-10 col-xs-12 col-lg-offset-3 col-md-offset-2 col-sm-offset-1">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">post a status message</h3>
+                </div>
+                <div class="panel-body">
+                    {{ form_start(form) }}
+                    {{ form_errors(form) }}
+                    
+                    <label for="form_status">{{ 'status.content'|trans }}</label>
+                    {{ form_widget(form.status) }}
+                    <br>
+                    {{ form_widget(form.save,{'attr':{'class':'btn btn-success pull-right'} }) }}
+                    
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+            {% for status in array %}
+
+                <div class="well">
+                    <div class="media">
+                        <div class="media-left">
+                            <a href="#">
+                                <img class="media-object" width="64" src="{{ status.picture }}" alt="...">
+                            </a>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading"><b>{{ status.username | lower }}</b></h4>
+                                    {{ status.status }}
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
     </div>
 {% endblock %}

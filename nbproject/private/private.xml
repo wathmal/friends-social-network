@@ -3,19 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/opt/lampp/htdocs/symphonytest/app/AppKernel.php</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/app/Resources/views/base.html.twig</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/src/Acme/UserBundle/Entity/User.php</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/src/Acme/UserBundle/UserBundle.php</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/config/routing/registration.xml</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/app/config/config.yml</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig</file>
             <file>file:/opt/lampp/htdocs/symphonytest/src/testBundle/Controller/DefaultController.php</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/src/testBundle/Entity/User.php</file>
-            <file>file:/opt/lampp/htdocs/symphonytest/src/testBundle/Resources/config/routing.yml</file>
             <file>file:/opt/lampp/htdocs/symphonytest/src/testBundle/Resources/views/Default/feed.html.twig</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/src/testBundle/Entity/Status.php</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/src/testBundle/Entity/User.php</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/views/layout.html.twig</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/src/testBundle/Resources/config/routing.yml</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/src/testBundle/Resources/views/Default/edituser.html.twig</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/config/routing/all.xml</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/confirmed.html.twig</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/app/config/security.yml</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/views/Security/login.html.twig</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/vendor/friendsofsymfony/user-bundle/Resources/views/Registration/register.html.twig</file>
+            <file>file:/opt/lampp/htdocs/symphonytest/app/Resources/views/base.html.twig</file>
         </group>
     </open-files>
 </project-private>

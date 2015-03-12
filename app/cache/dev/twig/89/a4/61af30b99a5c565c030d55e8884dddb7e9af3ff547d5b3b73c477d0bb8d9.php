@@ -42,6 +42,7 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
             body {
                 padding-top: 20px;
                 padding-bottom: 20px;
+                margin-bottom: 60px;
             }
 
             .navbar {
@@ -53,6 +54,20 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
                 margin-left: auto;
                 margin-right: auto;
             }
+            html {
+                position: relative;
+                min-height: 100%;
+            }
+
+            .footer {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                /* Set the fixed height of the footer here */
+                height: 45px;
+                background-color: #f5f5f5;
+            }
+
         </style>
 
     </head>
@@ -70,21 +85,20 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
                             <span class=\"icon-bar\"></span>
                         </button>
                         <a class=\"navbar-brand\" href=\"/\">
-                            <span class=\"glyphicon glyphicon-sunglasses\" aria-hidden=\"true\"></span>
                             friends
                         </a>
                     </div>
                     <div id=\"navbar\" class=\"navbar-collapse collapse\">
                         <ul class=\"nav navbar-nav\">
-                            <li class=\"active\"><a href=\"/\">home</a></li>
-                            <li><a href=\"/profile\">profile</a></li>
-                            <li><a href=\"#\">contact</a></li>
+                            <li class=\"active\"><a href=\"../\">home</a></li>
+                            <li id=\"profilenav\"><a href=\"profile\">profile</a></li>
+
 
                         </ul>
                         <ul class=\"nav navbar-nav navbar-right\">
                             <li id=\"registernav\"><a href=\"/register\">register<span class=\"sr-only\">(current)</span></a></li>
                             <li id=\"loginnav\"><a href=\"/login\">login<span class=\"sr-only\">(current)</span></a></li>
-                            <li><a href=\"../navbar-fixed-top/\">log out</a></li>
+                            <li><a href=\"/logout\">log out</a></li>
                         </ul>
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
@@ -93,21 +107,32 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
 
 
             <div class=\"jumbotron\">
-                <h1>....</h1>
+                <h1 style=\"text-align: center;\">cse friends network</h1>
             </div>
 
 
         ";
-        // line 73
+        // line 87
         $this->displayBlock('container', $context, $blocks);
-        // line 74
+        // line 88
         echo "
     </div>
-    
+
+
+    <footer class=\"footer\">
+        <div class=\"container\" style=\"text-align: center;\">
+            <p class=\"text-muted\">built using awesome <b>symfony framework</b> and <b>bootstrap</b>
+            <br>
+            <a href=\"https://github.com/wathmal/friends-social-network\">github project</a>
+            </p>
+            
+        </div>
+    </footer>
+
     ";
-        // line 77
+        // line 102
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 80
+        // line 105
         echo "
 </body>
 </html>
@@ -129,15 +154,15 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
         ";
     }
 
-    // line 73
+    // line 87
     public function block_container($context, array $blocks = array())
     {
     }
 
-    // line 77
+    // line 102
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 78
+        // line 103
         echo "
     ";
     }
@@ -154,6 +179,6 @@ class __TwigTemplate_89a461af30b99a5c565c030d55e8884dddb7e9af3ff547d5b3b73c477d0
 
     public function getDebugInfo()
     {
-        return array (  141 => 78,  138 => 77,  133 => 73,  127 => 8,  124 => 7,  118 => 5,  111 => 80,  109 => 77,  104 => 74,  102 => 73,  36 => 11,  34 => 7,  29 => 5,  23 => 1,);
+        return array (  166 => 103,  163 => 102,  158 => 87,  152 => 8,  149 => 7,  143 => 5,  136 => 105,  134 => 102,  118 => 88,  116 => 87,  36 => 11,  34 => 7,  29 => 5,  23 => 1,);
     }
 }

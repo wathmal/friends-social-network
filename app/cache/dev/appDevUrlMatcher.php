@@ -127,18 +127,21 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // test_homepage
-        if (0 === strpos($pathinfo, '/profile') && preg_match('#^/profile(?:/(?P<id>[^/]++))?$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'test_homepage')), array (  '_controller' => 'testBundle\\Controller\\DefaultController::showAction',  'id' => 'yo man go f**k ur selff!',));
-        }
+        if (0 === strpos($pathinfo, '/profile')) {
+            // profile_page
+            if (rtrim($pathinfo, '/') === '/profile') {
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'profile_page');
+                }
 
-        // test_add
-        if (rtrim($pathinfo, '/') === '/adduser') {
-            if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'test_add');
+                return array (  '_controller' => 'testBundle\\Controller\\DefaultController::showAction',  '_route' => 'profile_page',);
             }
 
-            return array (  '_controller' => 'testBundle\\Controller\\DefaultController::newAction',  '_route' => 'test_add',);
+            // test_add
+            if ($pathinfo === '/profile/edituser') {
+                return array (  '_controller' => 'testBundle\\Controller\\DefaultController::newAction',  '_route' => 'test_add',);
+            }
+
         }
 
         // feed_home
@@ -182,27 +185,9 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        if (0 === strpos($pathinfo, '/profile')) {
-            // fos_user_profile_show
-            if (rtrim($pathinfo, '/') === '/profile') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_fos_user_profile_show;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'fos_user_profile_show');
-                }
-
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::showAction',  '_route' => 'fos_user_profile_show',);
-            }
-            not_fos_user_profile_show:
-
-            // fos_user_profile_edit
-            if ($pathinfo === '/profile/edit') {
-                return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::editAction',  '_route' => 'fos_user_profile_edit',);
-            }
-
+        // fos_user_profile_edit
+        if ($pathinfo === '/profile/edit') {
+            return array (  '_controller' => 'FOS\\UserBundle\\Controller\\ProfileController::editAction',  '_route' => 'fos_user_profile_edit',);
         }
 
         if (0 === strpos($pathinfo, '/re')) {
